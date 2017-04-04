@@ -1,0 +1,27 @@
+﻿Combinations App
+
+Relatório de Desenvolvimento do SPA Combinations App.
+
+Sobre Single page Application (SPA):
+O SPA é um modelo de desenvolvimento que vem ganhando muito espaço e esta fortemente atrelado a difusão da linguagem javascript, por facilitar o desenvolvimento de aplicações client-side. As SPA são de forma bem simplificada, quase aplicações Descktop, que estão em sua maior parte em execução no browser. Olhando dessa perspectiva, pode-se afirmar que há uma divisão maior das responsabilidades entre cliente e servidor, dimunui-se o número de requisições e o consumo de banda. 
+
+
+Sobre AngularJS:
+Angular é atualmente o mais utilizado framework javascript da atualidade e principal ferramente na contrução de Single Page Applications (SPA).
+Suas caracteristicas mais marcantes são: Desenvolvomento baseado no modelo MVVM e o bidirecionamento dos dados ou como é conhecido: o "Two-way data binding". 
+	
+
+Trabalho realizado: 
+- Algoritimo de combinações;
+O algoritimo disponibilizado no github: https://gist.github.com/axelpale/3118596.
+Facil de implementar no contexto da aplicação e atende as duas premissas principais: Relaiza as combinações e permite a seleção da quantidade de caracteres por grupo de combinações.
+As únicas intervenções que fiz foram na entrada dos dados, para retirar os espaços em branco e caracteres repetidos. 
+	
+- Escolhas importantes realizada no percurso;
+Reutilizar algoritimo pronto que atendia perfeitamente a necessidade do projeto. Ganho de tempo não reinventando a roda.
+	
+- Facilidades e Dificuldades;
+A começar pelas facilidades, posso elencar principalmente o desenvolvimento das views e a manipulação do Html, css e bootstrap.
+Progressivamente aumentando a dificuldade esta o manuseio do framework Angular, que pela falta de experiência pratica ainda surgiram algumas dúvidas quanto a melhor forma de organização e distribuição dos componentes e melhores praticas no que diz respeito ao manuseio dos dados.
+Sem dúvida o ponto de maior dificuldade foi a implementação do login pela API do Google. Nunca havia utilizado e senti um pouco de dificuldade, a principio, na forma de trabalhar as requisições de forma assincrona(imagino que esse tenha sido o problema), tanto que, para inicializar a aplicação, é necessário utilizar o "comando grunt serve --force" para proceguir ignorar os warnings de "'gapi' is not defined". Mesmo importando a biblioteca (como entendi ser a forma correta) e buscando por diversas vezes em varias fontes até o ultimo minuto disponível uma solução para o problema, até o momento não obtive sucesso. Na aplicação esse problema pode ser observado ao realizar o reload dentro da view que gera as combinações. Mas conntinuarei procurando a solução do problema.
+Ultimo ponto foi a inclusão do botão "disconnect" que funciona perfeitamente quando rodo a aplicação ultilizando o servidor xammp mas ao inicializar pelo grunt serve, faz a mesma função do "Logout", desloga e sai da aplicação mas nao desconecta.

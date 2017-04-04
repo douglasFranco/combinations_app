@@ -1,0 +1,57 @@
+<!-- User info and Form -->
+<section class="jumbotron">        
+    <div class="container">  
+        <div class="row">                              
+            <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12 user-data">   
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <img class="media-object" ng-src="{{user.imageUrl}}" alt="{{user.nome}}">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{user.email}}</h4>
+                            {{user.nome}}
+                        </div>
+                    </div>                                    
+                                       
+                </div>                    
+            </div>
+            <div class="col-xs-12 col-sm-6">              
+                <form class="form" name="enterDataform" novalidade/>
+                    <div class="form-group" ng-class="{ 'has-error' : enterDataform.stringData.$error.required && !enterDataform.stringData.$pristine }">
+                        <input class="form-control" type="text" name="stringData" ng-model="data.stringData" placeholder="String a ser comparada" required/>
+                        <span ng-show="enterDataform.stringData.$error.required && !enterDataform.stringData.$pristine" class="help-block">É preciso informar uma string.</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : enterDataform.operatorgData.$error.required && !enterDataform.operatorgData.$pristine }">
+                        <input class="form-control" type="number" name="operatorgData" ng-model="data.operatorData" placeholder="Quantidade de caracteres por grupo de comparação" required/>
+                        <span ng-show="enterDataform.operatorgData.$error.required && !enterDataform.operatorgData.$pristine" class="help-block">É preciso informar a quantidade de caracteres por combinação.</span>
+                    </div>
+                    <button class="btn btn-block btn-info" ng-click="processSubmit()" ng-disabled="enterDataform.$invalid">Processar</button>                
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- List of results -->
+<section class="container">  
+    <div class="row">          
+        <table class="table table-striped">
+            <tr>
+                <th>Entradas</th>
+                <th>Combinações</th>
+            </tr>
+            <tr ng-repeat="tableResult in tableResults">
+                <td>{{tableResult.entrada}}</td>
+                <td>{{tableResult.resultado}}</td>
+            </tr>
+        </table>
+    </div>            
+</section>
+<!-- Signin, SignOut and Timer -->
+<footer class="footer-area">  
+    <div class="container">  
+        <a class="btn-logout" ng-href="#!/login" ng-click="signOut()">Logout</a>
+        <a class="btn-disconnect" ng-href="#!/login" ng-click="disconnect()">Disconect</a> 
+        <ng-include src="'views/timer.html'"></ng-include> 
+    <div> 
+</footer>
