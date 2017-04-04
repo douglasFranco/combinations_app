@@ -1,17 +1,25 @@
-﻿Combinations App
+﻿+++ Combinations App +++
 
-Relatório de Desenvolvimento do SPA Combinations App.
+Instalação do App:
+bower install;
+npm install;
+grunt;
+(caso seja  necessário gerar a pasta dist);
+grunt serve --force 
+(utilizar o "--force" tem alguns warnings que não consegui corrigir, a descrição do problema esta em "Facilidades e Dificuldades");
 
-Sobre Single page Application (SPA):
+***\\ Relatório de Desenvolvimento do SPA Combinations App //***
+
+*** Sobre Single page Application (SPA): ***
 O SPA é um modelo de desenvolvimento que vem ganhando muito espaço e esta fortemente atrelado a difusão da linguagem javascript, por facilitar o desenvolvimento de aplicações client-side. As SPA são de forma bem simplificada, quase aplicações Descktop, que estão em sua maior parte em execução no browser. Olhando dessa perspectiva, pode-se afirmar que há uma divisão maior das responsabilidades entre cliente e servidor, dimunui-se o número de requisições e o consumo de banda. 
 
 
-Sobre AngularJS:
+*** Sobre AngularJS: ***
 Angular é atualmente o mais utilizado framework javascript da atualidade e principal ferramente na contrução de Single Page Applications (SPA).
 Suas caracteristicas mais marcantes são: Desenvolvomento baseado no modelo MVVM e o bidirecionamento dos dados ou como é conhecido: o "Two-way data binding". 
 	
 
-Trabalho realizado: 
+*** Trabalho realizado: ***
 - Algoritimo de combinações;
 O algoritimo disponibilizado no github: https://gist.github.com/axelpale/3118596.
 Facil de implementar no contexto da aplicação e atende as duas premissas principais: Relaiza as combinações e permite a seleção da quantidade de caracteres por grupo de combinações.
